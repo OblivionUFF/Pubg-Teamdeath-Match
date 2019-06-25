@@ -27,11 +27,11 @@ Features
   - Team which achieve the MAX_OBJECTIVE first, wins the match!
 
 Credits:
-a_samp // Credits to SA-MP Team
-streamer // Credits to Incognito
-sscanf2 // Credits to maddinat0r
-foreach // Credits to Kar
-zcmd // Credits to Zeex
+a_samp // Credits to SA-MP Team , 
+streamer // Credits to Incognito ,
+sscanf2 // Credits to maddinat0r ,
+foreach // Credits to Kar ,
+zcmd // Credits to Zeex ,
 
 
 
