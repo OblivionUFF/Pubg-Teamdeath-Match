@@ -20,6 +20,7 @@ Features :
   - Player Statistics textdraws like pubg
   - Your team can't see opponent team player blip!
   - Inventry System (Weapons are near your spawn area) Thanks to CaioTJF!
+  Others are listed in sa-mp link!
 */
 
 #include <a_samp> // Credits to SA-MP Team
@@ -31,7 +32,7 @@ Features :
 
 //------- Team Defines and Gloabl Defines ---
 #define MAX_OBJECTIVE       40 // Change this to your required objective
-#define MAX_TDM_PLAYERS     1 // Don't change this!
+#define MAX_TDM_PLAYERS     2 // change to 1 to player solo! xD
 #define MAX_SLOT_PLAYERS    8  // 4 players in both team!
 
 #define TEAMNONE  			255
@@ -282,11 +283,7 @@ CMD:pubgtdm(playerid)
    ShowPlayerDialog(playerid, DIALOGID, DIALOG_STYLE_TABLIST_HEADERS, "PlayerUnknown's Battleground TDM", line2, "Play", "Cancel");
    return 1;
 }
-CMD:test(playerid)
-{
-  OnDialogResponse(playerid, 12, true, 0, " ");
-  return 1;
-}
+
 public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 {
 	 if(dialogid == DIALOGID)
@@ -977,7 +974,7 @@ public OnPlayerClickPlayerTextDraw(playerid, PlayerText:playertextid)
 			PlayerTextDrawHide(playerid, Inventory_index[playerid][i]);
 			PlayerTextDrawShow(playerid, Inventory_index[playerid][i]);
 
-			// DescriÁ„o do Item
+			// Descri√ß√£o do Item
 
 			PlayerTextDrawSetPreviewModel(playerid, Inventory_description[playerid][0], ItemsData[pInventory[playerid][invSlot][i]][item_model]);
             PlayerTextDrawSetPreviewRot(playerid, Inventory_description[playerid][0], ItemsData[pInventory[playerid][invSlot][i]][item_previewrot][0], ItemsData[pInventory[playerid][invSlot][i]][item_previewrot][1], ItemsData[pInventory[playerid][invSlot][i]][item_previewrot][2], ItemsData[pInventory[playerid][invSlot][i]][item_previewrot][3]);
@@ -2042,7 +2039,7 @@ CreateTextDrawPlayer(playerid)
 		PlayerTextDrawSetProportional(playerid, Inventory_textos[playerid][0], 1);
 		PlayerTextDrawSetShadow(playerid, Inventory_textos[playerid][0], 0);
 
-		Inventory_textos[playerid][1] = CreatePlayerTextDraw(playerid, 315.710540, 120.716636, ConvertToGameText("Seu invent·rio"));
+		Inventory_textos[playerid][1] = CreatePlayerTextDraw(playerid, 315.710540, 120.716636, ConvertToGameText("Seu invent√°rio"));
 		PlayerTextDrawLetterSize(playerid, Inventory_textos[playerid][1], 0.326999, 1.284999);
 		PlayerTextDrawAlignment(playerid, Inventory_textos[playerid][1], 1);
 		PlayerTextDrawColor(playerid, Inventory_textos[playerid][1], -1);
@@ -2053,7 +2050,7 @@ CreateTextDrawPlayer(playerid)
 		PlayerTextDrawSetProportional(playerid, Inventory_textos[playerid][1], 1);
 		PlayerTextDrawSetShadow(playerid, Inventory_textos[playerid][1], 0);
 
-		Inventory_textos[playerid][2] = CreatePlayerTextDraw(playerid, 248.200164, 144.800033, ConvertToGameText("CabeÁa"));
+		Inventory_textos[playerid][2] = CreatePlayerTextDraw(playerid, 248.200164, 144.800033, ConvertToGameText("Cabe√ßa"));
 		PlayerTextDrawLetterSize(playerid, Inventory_textos[playerid][2], 0.172995, 0.870832);
 		PlayerTextDrawAlignment(playerid, Inventory_textos[playerid][2], 2);
 		PlayerTextDrawColor(playerid, Inventory_textos[playerid][2], -1);
@@ -2333,15 +2330,6 @@ stock ShowPlayerKillTextDraw(playerid, text[], bool:kills=false, ktext[])
   pInfo[playerid][ShowingkillTD] = true;
   SetTimerEx("HideKillTD", 3500, false, "i", playerid);
 }
-
-CMD:seth(playerid, params[])
-{
-  new id, h;
-  if(sscanf(params, "ii", id, h)) return 1;
-  SetPlayerHealth(id, h);
-  return 1;
-}
-
 
 GlobalTextDraw(playerid, bool:show=false, slotid)
 {
