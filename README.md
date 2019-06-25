@@ -14,7 +14,6 @@ This is a base of Pubg Teamdeath Match!
 	your should remove return value under OnPlayerUpdate callback!
   - If there is any mistake or issues in code please reply in down in comments if possible also post the fix if you know!
 
-
 Features
   - Infinity Tdm Slots.
   - Only 4 players can be in both teams per sloth!
@@ -26,7 +25,6 @@ Features
   - Inventry System (Weapons are near your spawn area) Thanks to CaioTJF!
   - Maximum of 8 players can be in a team (4 in blue and 4 in red). Automatic Team Setting!
   - Team which achieve the MAX_OBJECTIVE first, wins the match!
-
 
 Credits:
 a_samp // Credits to SA-MP Team
