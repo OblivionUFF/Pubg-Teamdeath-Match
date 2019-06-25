@@ -25,7 +25,7 @@ Features
   - Inventry System (Weapons are near your spawn area) Thanks to CaioTJF!
   - Maximum of 8 players can be in a team (4 in blue and 4 in red). Automatic Team Setting!
   - Team which achieve the MAX_OBJECTIVE first, wins the match!
-
+  - Weapons are created around each team base and will be available until the time runs out! (More amount of weapons added for each item)
 Credits:
 a_samp // Credits to SA-MP Team , 
 streamer // Credits to Incognito ,
